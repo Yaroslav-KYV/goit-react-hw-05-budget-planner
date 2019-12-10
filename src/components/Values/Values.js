@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {
   getBudget,
@@ -8,19 +7,14 @@ import {
   getBalance,
 } from '../../redux/BudgetAcc/budgetAccSelectors';
 import Stats from '../Stats';
-
-const Container = styled.section`
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+import { Wrapper } from '../../styledComponents/allComponents.styled';
 
 const Values = ({ budget, expensesTotal, balance }) => (
-  <Container>
+  <Wrapper>
     <Stats label="Budget" value={budget} isPositive />
     <Stats label="Expenses" value={expensesTotal} />
     <Stats label="Balance" value={balance} isPositive={balance >= 0} />
-  </Container>
+  </Wrapper>
 );
 
 Values.propTypes = {

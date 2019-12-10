@@ -84,3 +84,9 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 `;
+
+export const Wrapper = styled.section`
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+`;
